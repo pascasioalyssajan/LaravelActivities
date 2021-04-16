@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('LOGIN YOUR ACCOUNT!!!') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('To access the Post Table, you must logged in your account.') }}
+                    <br><br>
+                    {{ __('If you dont have an account, Register first!') }}
+
                 </div>
             </div>
         </div>

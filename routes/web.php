@@ -20,8 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/posts', 'PostController');
+Route::resources([
+    '/posts' => PostController::class,
+    '/home' => HomeController::class,
+    '/login' => LoginController::class,
+
+]);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
