@@ -19,6 +19,24 @@
                     @else
                         No Image Available
                     @endif
+                    <p>Comments Section:</p>
+                    @if ($comments)
+
+                        @foreach ($comments as $comment)
+                                <p>{{ $comment->description }}</p>
+                            @endforeach
+                    @endif
+                    <h4> Add Comment </h4>
+                    <form method="POST" action="{{ route('comments.store') }}">
+                        @csrf
+                        <div class="form-group">
+                            <textarea class="form-control" name="description" id="" cols="30" rows="2"></textarea>
+                            <input type="hidden" name="post_id" value="{{ $post->id }}">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success" value="Add Comment">
+                        </div>
+                    </form>
                     </div>
             </div>
         </div>

@@ -16,7 +16,7 @@
                         </div>                        
                     @endif
 
-                    <form method="POST" action="/posts">
+                    
                     <form method="POST" action="/posts" enctype="multipart/form-data">
                         @csrf
 
@@ -49,7 +49,7 @@
                                 <span class="invalid-feedback" role="alert"> 
                                     {{ $message }}
                                 </span>                            
-                             @enderror
+                             @enderror   
 
     
                         </div>
